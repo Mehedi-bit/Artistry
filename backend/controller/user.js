@@ -66,10 +66,10 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
 
 // create activation token
 const createActivationToken = (user) => {
-  // why use create activatetoken?
+  // why use create activateToken?
   // to create a token for the user to activate their account  after they register
   return jwt.sign(user, process.env.ACTIVATION_SECRET, {
-    expiresIn: "5m",
+    expiresIn: "10d",
   });
 };
 
@@ -124,7 +124,7 @@ router.post(
         return next(new ErrorHandler("user doesn't exits", 400));
       }
 
-      // compore password with database password
+      // compare password with database password
       const isPasswordValid = await user.comparePassword(password);
 
       if (!isPasswordValid) {
@@ -142,7 +142,7 @@ router.post(
 // load user
 router.get(
   "/getuser",
-  // isAuthenticated,  // TODO: uncomment this line (did for lab)
+  isAuthenticated,  
   catchAsyncErrors(async (req, res, next) => {
     try {
       const user = await User.findById(req.user.id);
@@ -168,6 +168,8 @@ router.get(
       res.cookie("token", null, {
         expires: new Date(Date.now()),
         httpOnly: true,
+        secure: false, // set to true in production (HTTPS)
+        sameSite: "lax" // or "none" if secure: true
       });
       res.status(201).json({
         success: true,

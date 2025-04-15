@@ -175,6 +175,8 @@ router.get(
       res.cookie("seller_token", null, {
         expires: new Date(Date.now()),
         httpOnly: true,
+        secure: false, // set to true in production (HTTPS)
+        sameSite: "lax" // or "none" if secure: true
       });
       res.status(201).json({
         success: true,

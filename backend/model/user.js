@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema({
   },
   avatar: {
     type: String,
-    // required: true,  // TODO: uncomment this line (did for lab)
+    required: true,  // TODO: uncomment this line (did for lab)
   },
   createdAt: {
     type: Date,
