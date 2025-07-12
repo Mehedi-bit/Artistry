@@ -22,17 +22,22 @@ const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on http://localhost:${process.env.PORT || 5000}`);
 });
 
-// middlewares
-app.use(express.json());
-app.use(cookieParser());
-// Enable CORS for all routes
 
+// Enable CORS for routes
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
     credentials: true,
   })
 );
+
+
+// middlewares
+app.use(express.json());
+app.use(cookieParser());
+
+
+
 
 app.use("/", express.static("uploads"));
 
