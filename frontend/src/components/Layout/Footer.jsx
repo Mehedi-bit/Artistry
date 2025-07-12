@@ -83,7 +83,7 @@ const Footer = () => {
                     <img
                         src="/Artistry-logo-1.png"
                         alt="Artistry"
-                        style={{ filter: "brightness(0) invert(1)" }}
+                        style={{}}
                         className="w-[300px] h-[80px] object-contain"
                     />
                     <br />
