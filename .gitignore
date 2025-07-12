@@ -1,6 +1,5 @@
 # dependencies
 backend/config/.env
-backend/uploads
 frontend/node_modules
 frontend/.env
 backend/node_modules
