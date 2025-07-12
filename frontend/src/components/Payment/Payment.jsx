@@ -16,6 +16,8 @@ import { toast } from "react-toastify";
 import { RxCross1 } from "react-icons/rx";
 
 
+const EXCHANGE_RATE_BDT_TO_USD = 110;
+
 const Payment = () => {
     const [orderData, setOrderData] = useState([]);
     const [open, setOpen] = useState(false);
@@ -31,6 +33,9 @@ const Payment = () => {
 
     // Pay-pal
     const createOrder = (data, actions) => {
+
+        const priceInUSD = (orderData?.totalPrice / EXCHANGE_RATE_BDT_TO_USD).toFixed(2);
+
         return actions.order
             .create({
                 purchase_units: [
@@ -38,7 +43,7 @@ const Payment = () => {
                         description: "Sunflower",
                         amount: {
                             currency_code: "USD",
-                            value: orderData?.totalPrice,
+                            value: priceInUSD,
                         },
                     },
                 ],
