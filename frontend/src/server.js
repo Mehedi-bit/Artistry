@@ -9,5 +9,8 @@
 
 
 // for production (it was not here)
-export const server = `${import.meta.env.REACT_APP_API_URL}/api/v2`;
-export const backend_url = `${import.meta.env.REACT_APP_API_URL}/`;
+// export const server = `${import.meta.env.REACT_APP_API_URL}/api/v2`;
+// export const backend_url = `${import.meta.env.REACT_APP_API_URL}/`;
+
+export const server = 'https://artistry-backend-xx3f.onrender.com/api/v2';
+export const backend_url = 'https://artistry-backend-xx3f.onrender.com/';

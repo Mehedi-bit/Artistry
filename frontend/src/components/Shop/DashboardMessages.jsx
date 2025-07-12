@@ -13,7 +13,8 @@ import { format } from "timeago.js";
 // const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
 // (new, instead of prev 2 lines, for production)
-const socketId = socketIO(import.meta.env.REACT_APP_SOCKET_URL, {
+const ENDPOINT = "https://artistry-socket.onrender.com/";
+const socketId = socketIO(ENDPOINT, {
   transports: ["websocket"],
   withCredentials: true,
 });
