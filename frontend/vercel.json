@@ -1,17 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.html" }
   ],
-  "build": {
-    "env": {
-      "NPM_FLAGS": "--legacy-peer-deps"
-    }
-  }
+  "buildCommand": "npm install --legacy-peer-deps && npm run build"
 }
