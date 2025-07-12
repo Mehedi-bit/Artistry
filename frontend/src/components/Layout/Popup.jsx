@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const company = "Artistry Team👋";
+const company = "Haven Team👋";
 
 const popupMessages = [
   "Stylish bags, fresh arrivals! 👜",
