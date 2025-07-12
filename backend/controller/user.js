@@ -43,7 +43,7 @@ router.post("/create-user", upload.single("file"), async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://artistry-three.vercel.app/activation/${activationToken}`;
 
     // send email to user
     try {
@@ -169,7 +169,7 @@ router.get(
         httpOnly: true,
         secure: true, // set to true in production (HTTPS)
         sameSite: "None", // or "none" if secure: true
-        expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days
+        expires: new Date(Date.now()), // immediately expire the cookie
       });
       res.status(201).json({
         success: true,
