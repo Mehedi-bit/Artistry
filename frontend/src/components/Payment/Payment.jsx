@@ -56,7 +56,7 @@ const Payment = () => {
         cart: orderData?.cart,
         shippingAddress: orderData?.shippingAddress,
         user: user && user,
-        totalPrice: orderData?.totalPrice / 120,
+        totalPrice: orderData?.totalPrice,
     };
 
     const onApprove = async (data, actions) => {
