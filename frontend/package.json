@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "preinstall": "npx npm@9 install --legacy-peer-deps",  // you can remove this (newly added)
+    "preinstall": "npx npm@9 install --legacy-peer-deps", 
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
