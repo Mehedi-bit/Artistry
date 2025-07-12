@@ -9,8 +9,15 @@ import styles from "../../styles/styles";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
-const ENDPOINT = "http://localhost:4000/";
-const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
+// const ENDPOINT = "http://localhost:4000/";
+// const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
+
+// (new, instead of prev 2 lines, for production)
+const socketId = socketIO(import.meta.env.REACT_APP_SOCKET_URL, {
+  transports: ["websocket"],
+  withCredentials: true,
+});
+
 
 const DashboardMessages = () => {
   const { seller } = useSelector((state) => state.seller);
