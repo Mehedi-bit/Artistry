@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
 import { productData, categoriesData } from "../../static/data";
@@ -32,6 +32,8 @@ const Header = ({ activeHeading }) => {
   const [openWishlist, setOpenWishlist] = useState(false);
   const [open, setOpen] = useState(false); // mobile menu
 
+  const searchRef = useRef();
+
   // Handle search change
   const handleSearchChange = (e) => {
     const term = e.target.value;
@@ -54,6 +56,23 @@ const Header = ({ activeHeading }) => {
     }
   });
 
+  
+  useEffect(() => {
+  const handleClickOutside = (event) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setSearchData(null); // clear search results
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
+
+
   return (
     <>
       <div className={`${styles.section}`}>
@@ -68,7 +87,7 @@ const Header = ({ activeHeading }) => {
             </Link>
           </div>
           {/*Search box  */}
-          <div className="w-[50%] relative">
+          <div className="w-[50%] relative"  ref={searchRef}>
             <input
               type="text"
               placeholder="Search for product..."
