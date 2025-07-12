@@ -5,8 +5,8 @@ const TestimonialSection = () => {
     {
       title: "A vibrant platform for artisans",
       content: [
-        "Artistry has been a game-changer for me as an artisan. It’s the perfect place to showcase and sell my handmade pottery. The platform is user-friendly, and I love how it connects me with customers who truly appreciate creativity and craftsmanship.",
-        "Thanks to Artistry, I’ve been able to expand my customer base and grow my passion into a sustainable business."
+        "Handmade Haven has been a game-changer for me as an artisan. It’s the perfect place to showcase and sell my handmade pottery. The platform is user-friendly, and I love how it connects me with customers who truly appreciate creativity and craftsmanship.",
+        "Thanks to Handmade Haven, I’ve been able to expand my customer base and grow my passion into a sustainable business."
       ],
       name: "Sara Ahmed",
       role: "Handmade Pottery Artist",
@@ -15,8 +15,8 @@ const TestimonialSection = () => {
     {
       title: "A marketplace that values creativity",
       content: [
-        "As a painter, finding a platform that truly understands and supports creative work was a challenge until I discovered Artistry. The community here is fantastic, and the tools provided make selling art pieces seamless.",
-        "I’ve connected with customers who appreciate the effort behind every stroke of my brush. Highly recommend Artistry to all creatives!"
+        "As a painter, finding a platform that truly understands and supports creative work was a challenge until I discovered Handmade Haven. The community here is fantastic, and the tools provided make selling art pieces seamless.",
+        "I’ve connected with customers who appreciate the effort behind every stroke of my brush. Highly recommend Handmade Haven to all creatives!"
       ],
       name: "Rajib Hassan",
       role: "Fine Arts Painter",
@@ -25,7 +25,7 @@ const TestimonialSection = () => {
     {
       title: "Effortless and rewarding for crafters",
       content: [
-        "Artistry has provided me with an incredible opportunity to showcase my handmade jewelry to a wider audience. The platform’s focus on handmade and artistic creations resonates perfectly with my brand.",
+        "Handmade Haven has provided me with an incredible opportunity to showcase my handmade jewelry to a wider audience. The platform’s focus on handmade and artistic creations resonates perfectly with my brand.",
         "The customer support team is excellent, and the ease of setting up a shop here makes it the ideal choice for artisans like me."
       ],
       name: "Ayesha Haque",
@@ -35,7 +35,7 @@ const TestimonialSection = () => {
     {
       title: "A supportive platform for creative entrepreneurs",
       content: [
-        "Artistry has been the stepping stone for turning my passion for woodworking into a full-fledged business. The exposure and sales I’ve gained here have been incredible.",
+        "Handmade Haven has been the stepping stone for turning my passion for woodworking into a full-fledged business. The exposure and sales I’ve gained here have been incredible.",
         "The platform is easy to use, and the community is so supportive. It’s truly built for those who love art and craftsmanship."
       ],
       name: "Anik Chowdhury",
@@ -52,7 +52,7 @@ const TestimonialSection = () => {
             Testimonials
           </h2>
           <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
-            Hear from artisans and creatives who’ve turned their passion into success with Artistry.
+            Hear from artisans and creatives who’ve turned their passion into success with Handmade Haven.
           </p>
         </div>
         <div className="grid mb-8 lg:mb-12 lg:grid-cols-2">
