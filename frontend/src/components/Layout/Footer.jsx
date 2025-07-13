@@ -26,7 +26,7 @@ const Footer = () => {
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div className="mx-auto max-w-lg text-center">
                     <h2 className="text-2xl font-bold text-[#F16521] md:text-4xl">
-                        ARTISTRY NEWSLETTER
+                        HANDMADE NEWSLETTER
                     </h2>
 
                     <p className="hidden text-gray-700 sm:mt-4 sm:block">
